@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 body {
-  @apply bg-background;
+  @apply bg-background font-poppins text-text;
 }
 
 .link-wrapper {
@@ -11,9 +11,13 @@ body {
 }
 
 .link {
-  @apply bg-items px-4 py-3 rounded-lg flex justify-center items-center hover:scale-110 hover:drop-shadow-lg transition-all duration-100 cursor-pointer active:bg-background hover:-translate-y-1 active:translate-y-0;
+  @apply bg-items px-4 py-3 rounded-lg flex justify-center items-center hover:scale-110 hover:drop-shadow-lg transition-all duration-100 cursor-pointer active:bg-background hover:-translate-y-1;
 }
 
 .link-text {
-  @apply text-[7px] hidden group-hover:block absolute bottom-0 tracking-widest underline;
+  @apply text-[7px] opacity-0 group-hover:opacity-80 transition-opacity duration-100 absolute bottom-0 tracking-widest underline;
+}
+
+.img-session {
+  @apply flex justify-center items-center flex-col  relative bg-items rounded-lg hover:scale-110 hover:drop-shadow-lg hover:-translate-y-1 cursor-pointer;
 }
